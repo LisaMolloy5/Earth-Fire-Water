@@ -10,3 +10,7 @@ print("Water Beats Fire")
 print("Fire Beats Earth")
 print("Earth Beats Water")
 print("Good Luck :D")
+
+playerScore = 0
+computerScore = 0
+
