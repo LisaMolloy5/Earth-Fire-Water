@@ -20,13 +20,11 @@ gameChoices = ["Water", "Fire", "Earth"]
 while True:
     playerChoice = input("Enter Water / Fire / Earth or S to stop the game: ")
 
-    if (playerChoice != ["Fire", "Earth", "Water"]):
-        print("Invalid Input. Try Again")
-        break
-
     if playerChoice == "s":
         break
-
+    if playerChoice not in gameChoices:
+        print("Invalid Input. Try Again")
+        continue
 
     computerChoice = random.choice(gameChoices)
     print("Computer choice: ", computerChoice)
