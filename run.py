@@ -16,18 +16,37 @@ computerScore = 0
 
 gameChoices = ["Water", "Fire", "Earth"]
 
-def hasWon(playerChoice, computerChoice):
-    """
-    Function to calculate game combinations to show who has won the game.
-    """      
-    if (playerChoice == "Water" and computerChoice == "Fire") or (playerChoice == "Fire" and computerChoice == "Earth") or (playerChoice == "Earth" and computerChoice == "Water"):
-        print("YOU WON! :D")
-        return "Player"
-    elif (playerChoice == "Fire" and computerChoice == "Water") or (playerChoice == "Earth" and computerChoice == "Fire") or (playerChoice == "Water" and computerChoice == "Earth"):
-        print("YOU LOST :(")
-        return "Computer"
-    elif (playerChoice == computerChoice):
-        print("TIE!")
 
-    
+while True:
+    playerChoice = input("Enter Water / Fire / Earth or S to stop the game: ")
+
+    if (playerChoice != ["Fire", "Earth", "Water"]):
+        print("Invalid Input. Try Again")
+        break
+
+    if playerChoice == "s":
+        break
+
+
+    computerChoice = random.choice(gameChoices)
+    print("Computer choice: ", computerChoice)
+
+    if playerChoice == "Water" and computerChoice == "Fire":
+        print("Woo! you Won")
+        playerScore += 1
+    elif playerChoice == "Fire" and computerChoice == "Earth":
+        print("Woo! you Won")
+        playerScore += 1
+    elif playerChoice == "Earth" and computerChoice == "Water":
+        print("Woo! you Won")
+        playerScore += 1
+    else:
+        print("Sorry! You Lost :(")
+        computerScore += 1
+
+
+print("You Won", playerScore, "times.")
+print("The Computer Won", computerScore, "times.")
+print("GoodBye! Thanks for playing :D") 
+
 
