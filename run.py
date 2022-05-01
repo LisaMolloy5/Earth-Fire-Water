@@ -14,3 +14,5 @@ print("Good Luck :D")
 playerScore = 0
 computerScore = 0
 
+gameChoices = ["Water", "Fire", "Earth"]
+
